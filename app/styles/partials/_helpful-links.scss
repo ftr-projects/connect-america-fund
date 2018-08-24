@@ -1,0 +1,29 @@
+.helpful-links {
+  padding-bottom: 60px;
+
+  h3 {
+    /*color: $white;*/
+    text-align: center;
+    margin: 0 0 35px 0;
+    padding: 70px 0 30px;
+  }
+  ul, a {
+    /*color: $white !important;*/
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration: underline;
+    font-family: "nexa book";
+    text-align: center;
+    li {
+      margin-bottom: 16px;
+      list-style-type: none;
+    }
+    //margin-left: 25px !important;
+  }
+}
+iframe {
+  overflow-y:hidden;
+}
+svg {
+  min-height:30px !important;
+}

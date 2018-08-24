@@ -1,0 +1,134 @@
+.hero-component {
+
+  .wrapper {
+
+    background-color: $black;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    position: relative;
+
+    &.sl-1 {
+      background-image: url(../images/hero-slider-2.jpg);
+    }
+    &.sl-2 {
+      background-image: url(../images/hero-demo.jpg);
+      .content {
+          @media only screen and (min-width: $screen-md) {
+            top: 25%;
+          }
+      }
+
+      h2 {
+        a {
+          color: $red;
+          font-family: "nexa black";
+        }
+      }
+    }
+
+    &:after {
+      bottom: 0;
+      background-color: rgba($black, .5);
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+
+      @media only screen and (min-width: $screen-md) {
+        background-color: transparent;
+      }
+    }
+
+    &.dark {
+      .content {
+        color: $black;
+      }
+
+      &:after {
+        background-color: rgba($white, .5);
+
+        @media only screen and (min-width: $screen-md) {
+          background-color: transparent;
+        }
+      }
+    }
+
+  }
+
+  .content {
+    color: $white;
+    padding: 50px 0;
+    position: relative;
+    text-align: center;
+    top: initial;
+    width: 100%;
+    z-index: 2;
+min-height: 320px;
+
+    @media only screen and (min-width: $screen-sm) {
+      min-height: auto;
+    }
+
+    @media only screen and (min-width: $screen-md) {
+      padding: 0;
+      position: absolute;
+      text-align: left;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 55%;
+    }
+    @media only screen and (min-width: $screen-lg) {
+      top: 35%;
+      width: 45%;
+    }
+
+    @media only screen and (min-width: 1400px) {
+      top: 35%;
+      width: 38%;
+    }
+  }
+
+  h1 {
+    font-family: "nexa xbold";
+    font-size: 30px;
+    margin: 0;
+
+    @media only screen and (min-width: $screen-md) {
+      font-size: 33px;
+    }
+  }
+
+  h2 {
+    font-family: "nexa xbold";
+    font-size: 24px;
+    color: $red;
+
+    @media only screen and (min-width: $screen-md) {
+      font-size: 28px;
+      margin-top: 10px;
+    }
+  }
+
+  h3 {
+    font-family: "nexa xbold";
+    font-size: 20px;
+    margin-top: 0;
+    @media only screen and (min-width: $screen-md) {
+      font-size: 24px;
+    }
+  }
+
+  .placeholder {
+    display: none;
+
+    @media only screen and (min-width: $screen-md) {
+      display: block;
+      height: auto;
+      visibility: hidden;
+      width: 100%;
+    }
+  }
+}

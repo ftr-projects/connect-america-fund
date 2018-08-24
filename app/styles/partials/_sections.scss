@@ -1,0 +1,46 @@
+.bg-section {
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  min-height: auto;
+  @media only screen and (min-width: $screen-md) {
+    padding: 70px 0;
+    min-height: 500px;
+  }
+}
+
+.bg-r {
+  background-position: 62% center;
+}
+
+.bg-c {
+  background-position: center center;
+}
+
+.l-bg {
+    background-color: #fafafa;
+}
+
+.d-bg {
+  background-color: #565854;
+  color: #FFF;
+}
+
+@media only screen and (min-width: $screen-md) {
+
+}
+
+.post {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media only screen and (min-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
