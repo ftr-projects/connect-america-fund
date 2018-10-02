@@ -1,1 +1,44 @@
-!function e(r,t,s){function i(o,c){if(!t[o]){if(!r[o]){var a="function"==typeof require&&require;if(!c&&a)return a(o,!0);if(n)return n(o,!0);var l=new Error("Cannot find module '"+o+"'");throw l.code="MODULE_NOT_FOUND",l}var u=t[o]={exports:{}};r[o][0].call(u.exports,function(e){var t=r[o][1][e];return i(t||e)},u,u.exports,e,r,t,s)}return t[o].exports}for(var n="function"==typeof require&&require,o=0;o<s.length;o++)i(s[o]);return i}({1:[function(e,r,t){"use strict";$(document).ready(function(){function e(e){$("<link/>",{rel:"stylesheet",type:"text/css",href:e}).appendTo("head")}$.getScript("//platform.twitter.com/widgets.js"),$.fn.slick?$(".hero-slider").slick({dots:!0,infinite:!1,autoplay:!0,speed:800,autoplaySpeed:6e4,arrows:!1,fade:!1,cssEase:"linear",pauseOnHover:!1}):(e("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"),e("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"),$.getScript("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js").done(function(){}))})},{}]},{},[1]);
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+'use strict';
+
+$(document).ready(function () {
+  var lickCSSUrl = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css';
+  var slickThemeCSSUrl = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css';
+  var slickScript = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js';
+
+  $.getScript("//platform.twitter.com/widgets.js");
+
+  if (!$.fn.slick) {
+    getStyles(lickCSSUrl);
+    getStyles(slickThemeCSSUrl);
+    $.getScript(slickScript).done(function () {
+      //initSlider();
+    });
+  } else {
+    initSlider();
+  }
+
+  function getStyles(url) {
+    $('<link/>', {
+      rel: 'stylesheet',
+      type: 'text/css',
+      href: url
+    }).appendTo('head');
+  }
+
+  function initSlider() {
+    $('.hero-slider').slick({
+      dots: true,
+      infinite: false,
+      autoplay: true,
+      speed: 800,
+      autoplaySpeed: 60000,
+      arrows: false,
+      fade: false,
+      cssEase: 'linear',
+      pauseOnHover: false
+    });
+  }
+});
+
+},{}]},{},[1]);
